@@ -1,75 +1,346 @@
-/* Reset agar tampilan rapi di semua browser */
+/* =========================================
+   THEME: PURPLE & PINK GRADIENT + BLUE GREY
+   ========================================= */
+
+/* Reset & Font */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: #333;
+    /* Background Abu-abu Biru (Slate 300) agar kartu putih terlihat jelas */
+    background-color: #cbd5e1; 
+    color: #334155; 
     line-height: 1.6;
 }
 
-/* Styling Navbar */
+/* --- DEFINISI WARNA (GRADASI) --- */
+:root {
+    --gradient-text: linear-gradient(45deg, #7e22ce, #ec4899); /* Ungu ke Pink */
+}
+
+/* --- NAVBAR --- */
 nav {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 20px 5%; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px 5%; 
+    background: rgba(255, 255, 255, 0.95); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); 
     position: sticky; top: 0; z-index: 1000;
 }
-.logo { font-weight: 700; font-size: 1.5rem; color: #2563eb; }
+
+.logo { 
+    font-weight: 800; font-size: 1.8rem; 
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 nav ul { list-style: none; display: flex; gap: 20px; }
-nav a { text-decoration: none; color: #333; font-weight: 500; }
-nav a:hover { color: #2563eb; }
+nav a { text-decoration: none; color: #475569; font-weight: 600; transition: 0.3s; }
+nav a:hover { color: #ec4899; } 
 
-/* Styling Umum */
-.container { max-width: 1000px; margin: auto; padding: 0 20px; }
+/* --- UMUM --- */
+.container { max-width: 1100px; margin: auto; padding: 0 20px; }
 .section-padding { padding: 80px 0; }
-.bg-light { background-color: #f8f9fa; }
 .text-center { text-align: center; }
-h2 { text-align: center; margin-bottom: 40px; color: #1e293b; font-size: 2rem; }
-.accent { color: #2563eb; }
 
-/* Hero Section */
+/* Judul Utama (H2) */
+h2 { 
+    text-align: center; margin-bottom: 40px; font-size: 2.2rem; font-weight: 800;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- HERO SECTION --- */
 .hero {
     height: 100vh; display: flex; align-items: center; justify-content: center;
-    text-align: center; background: #f0f4ff;
+    text-align: center; 
+    /* Gradasi Background Hero smooth */
+    background: linear-gradient(180deg, #e2e8f0 0%, #cbd5e1 100%);
 }
-.hero h1 { font-size: 3rem; margin-bottom: 10px; }
 
-/* Tombol */
-.btn {
-    display: inline-block; padding: 12px 30px; background: #2563eb;
-    color: white; text-decoration: none; border-radius: 50px;
-    font-weight: 600; transition: 0.3s;
+.hero h1 { 
+    font-size: 3rem; margin-bottom: 15px; line-height: 1.2;
+    color: #1e293b; 
 }
-.btn:hover { background: #1d4ed8; transform: translateY(-3px); }
+
+.accent { 
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+/* --- TOMBOL --- */
+.btn {
+    display: inline-block; padding: 12px 35px; 
+    background: var(--gradient-text);
+    color: white; text-decoration: none; border-radius: 50px;
+    font-weight: 600; transition: 0.3s; 
+    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);
+    border: none;
+}
+.btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(236, 72, 153, 0.6); }
 
 .btn-outline {
-    display: inline-block; padding: 10px 20px; border: 2px solid #2563eb;
-    color: #2563eb; text-decoration: none; border-radius: 5px; margin: 5px;
+    display: inline-block; padding: 10px 25px; 
+    border: 2px solid #ec4899; color: #ec4899; 
+    text-decoration: none; border-radius: 50px; margin: 5px;
+    font-weight: 600; transition: 0.3s;
+}
+.btn-outline:hover { background: #ec4899; color: white; }
+
+/* --- SKILLS (PIL) --- */
+.skills-container { margin-top: 40px; }
+.skills-container h3 { font-size: 1.3rem; margin-bottom: 15px; color: #581c87; }
+.skills-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.skills-list li {
+    background: #581c87; color: white; 
+    padding: 8px 20px; border-radius: 50px;
+    font-size: 0.9rem; font-weight: 500;
+    box-shadow: 0 4px 10px rgba(88, 28, 135, 0.3);
 }
 
-/* Portfolio Grid */
+/* --- TOOLS SECTION (LIGHT THEME / SERAGAM) --- */
+.tools-section {
+    background-color: transparent; 
+    padding: 80px 0; color: #334155;
+}
+
+.tools-title {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem; margin-bottom: 15px; font-weight: 800;
+}
+
+.tools-subtitle { color: #475569; margin-bottom: 50px; }
+
+.tools-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;
+}
+
+.tool-card {
+    background-color: #ffffff; /* Kartu Putih */
+    border-radius: 15px; padding: 20px;
+    display: flex; align-items: center; 
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px); 
+    border: 1px solid #ec4899; /* Border Pink saat hover */
+    box-shadow: 0 10px 20px rgba(236, 72, 153, 0.15);
+}
+
+.tool-icon { font-size: 40px; margin-right: 15px; color: #581c87; }
+
+.tool-info h4 { margin: 0; font-size: 1.1rem; color: #1e293b; font-weight: 700; }
+.tool-info span { font-size: 0.85rem; color: #64748b; }
+
+/* --- PORTFOLIO GRID --- */
 .grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
+
 .card {
-    background: white; border-radius: 10px; overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s;
+    background: white; 
+    border-radius: 15px; overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+    transition: 0.3s;
+    border: none;
 }
-.card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+.card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(126, 34, 206, 0.15); }
+
 .card-header {
-    height: 150px; background: #cbd5e1; display: flex;
-    align-items: center; justify-content: center; color: #64748b; font-weight: bold;
+    height: 150px; 
+    background: linear-gradient(135deg, #e9d5ff 0%, #fbcfe8 100%); 
+    display: flex; align-items: center; justify-content: center; 
+    color: #7e22ce; font-weight: bold; font-size: 1.2rem;
 }
-.card-body { padding: 20px; }
-.card-body h3 { margin-bottom: 10px; }
+.card-body { padding: 25px; }
+.card-body h3 { margin-bottom: 10px; color: #581c87; }
 
-/* Footer */
+/* --- FOOTER --- */
 footer {
-    text-align: center; padding: 20px; background: #1e293b; color: white; margin-top: 50px;
+    text-align: center; padding: 30px; 
+    background: #1e293b; color: #94a3b8; margin-top: 0;
+    border-top: 4px solid #ec4899;
 }
 
-/* Responsif untuk HP */
+/* RESPONSIF */
 @media (max-width: 768px) {
-    .hero h1 { font-size: 2rem; }
-    nav { flex-direction: column; gap: 10px; }
+    .hero h1 { font-size: 2.5rem; }
+    nav { flex-direction: column; gap: 15px; text-align: center; }
+}
+/* --- CONTACT SECTION (VERTIKAL) --- */
+
+/* Wadah agar tombol berada di tengah dan lebarnya pas */
+.contact-wrapper {
+    display: flex;
+    flex-direction: column; /* Menyusun ke bawah */
+    gap: 15px; /* Jarak antar tombol */
+    max-width: 500px; /* Lebar maksimal agar tidak terlalu lebar di laptop */
+    margin: 30px auto 0; /* Posisi tengah */
+}
+
+/* Desain Tombol/Kartu Kontak */
+.contact-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px 25px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+/* Ikon (Emoji) */
+.contact-card .icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+/* Teks Kontak */
+.contact-card .text {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Efek saat mouse diarahkan (Hover) */
+.contact-card:hover {
+    transform: translateY(-3px); /* Naik sedikit */
+    border-color: #ec4899; /* Pinggiran jadi Pink */
+    background: linear-gradient(to right, #fff0f5, #ffffff); /* Background agak pink muda */
+    box-shadow: 0 10px 20px rgba(236, 72, 153, 0.15);
+    color: #be185d; /* Teks jadi merah muda gelap */
+}
+/* --- ABOUT SECTION (STYLE REFERENSI BARU) --- */
+
+.about-content {
+    display: flex;
+    align-items: center; /* Rata tengah vertikal */
+    justify-content: space-between;
+    gap: 60px; /* Jarak antar foto dan teks */
+}
+
+/* --- 1. BAGIAN FOTO (KIRI) --- */
+.about-image-container {
+    flex: 0 0 40%; /* Lebar area foto sekitar 40% */
+    position: relative; /* Agar backdrop bisa diatur posisinya */
+    display: flex;
+    justify-content: center;
+}
+
+/* Kotak Gradasi di Belakang Foto */
+.image-backdrop {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, #7e22ce, #ec4899); /* Gradasi Ungu-Pink */
+    border-radius: 30px; /* Sudut tumpul */
+    z-index: 0; /* Di belakang foto */
+    bottom: -20px; /* Geser sedikit ke bawah agar artistik */
+    right: 20px; /* Geser sedikit ke kanan */
+    box-shadow: 0 20px 40px rgba(126, 34, 206, 0.4); /* Efek glow */
+}
+
+/* Foto Profil Asli */
+.profile-pic {
+    position: relative;
+    z-index: 1; /* Di depan backdrop */
+    width: 300px;
+    border-radius: 30px; /* Samakan lengkungan dengan backdrop */
+    border: 4px solid rgba(255,255,255, 0.5); /* Bingkai tipis transparan */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* --- 2. BAGIAN TEKS (KANAN) --- */
+.about-text-area {
+    flex: 1;
+}
+
+/* Judul Nama (Alignment Kiri Khusus di sini) */
+.about-name {
+    text-align: left; /* Paksa rata kiri sesuai gambar */
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+/* Paragraf */
+.about-text-area p {
+    margin-bottom: 20px;
+    color: #475569;
+    font-size: 1rem;
+}
+
+/* Bold Text (Laravel, React, dll) */
+.about-text-area b {
+    color: #1e293b; /* Warna gelap tegas */
+    font-weight: 700;
+}
+
+/* --- KOTAK EXPERTISE (LIGHT / SERAGAM) --- */
+.expertise-box {
+    background-color: #ffffff; /* Ganti jadi Putih (bukan hitam lagi) */
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 30px;
+    
+    /* Berikan bayangan halus & garis tipis agar sama dengan kartu lain */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid #ffffff; 
+    transition: 0.3s;
+}
+
+/* Efek saat disentuh mouse (biar interaktif) */
+.expertise-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(126, 34, 206, 0.1); /* Bayangan ungu tipis */
+}
+
+.expertise-box h3 {
+    /* Judul kita beri warna gradasi Ungu-Pink (Sama dengan judul lain) */
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-align: left; /* Rata kiri */
+    font-weight: 800;
+}
+
+.expertise-box .skills-list {
+    justify-content: flex-start; /* List rata kiri */
+}
+
+.expertise-box .skills-list li {
+    /* Kembalikan warna pil menjadi Ungu Solid (Style global) */
+    background: #581c87; 
+    color: white; 
+    border: none; /* Hapus garis pinggir putih bekas dark mode */
+    box-shadow: 0 4px 10px rgba(88, 28, 135, 0.3); /* Bayangan ungu */
+}
+/* --- PERBAIKAN GAMBAR/LOGO DALAM KARTU --- */
+
+/* Aturan Umum: Semua gambar di dalam body kartu tidak boleh melebihi lebar kartu */
+.card-body img {
+    max-width: 100%; /* Mentok di lebar kartu */
+    height: auto;    /* Tinggi menyesuaikan agar tidak gepeng */
+    border-radius: 8px; /* Opsional: Biar sudutnya tidak tajam */
+    margin-bottom: 15px; /* Jarak antara gambar dan teks di bawahnya */
+}
+
+/* Aturan Khusus: Jika itu adalah LOGO kecil, kita batasi lebih ketat */
+/* Gunakan ini jika gambar itu adalah logo brand/perusahaan */
+.card-body img.logo-small {
+    width: 80px; /* Paksa lebar hanya 80px (kecil) */
+    height: auto;
 }

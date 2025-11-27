@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Saya</title>
+    <title>Portofolio Wisik Adi Panuntun</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
     <nav>
-        <div class="logo">Portofolio.</div>
+        <div class="logo">Portofolio</div>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">Tentang</a></li>
+            <li><a href="#tools">Skills</a></li>
             <li><a href="#portfolio">Karya</a></li>
             <li><a href="#contact">Kontak</a></li>
         </ul>
@@ -21,7 +24,7 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Halo, Saya <span class="accent">Wisik Adi Panuntun</span></h1>
+            <h1>Halo, Saya <br> <span class="accent typing-text"></span></h1>
             <p>Mahasiswa TI UNNES Semester 6 | Full-Stack Development Enthusiast</p>
             <br>
             <a href="#portfolio" class="btn">Lihat Karya Saya</a>
@@ -30,10 +33,206 @@
 
     <section id="about" class="section-padding">
         <div class="container">
-            <h2>Tentang Saya</h2>
-            <p>Saya adalah mahasiswa Teknik Informatika Universitas Negeri Semarang semester 6 yang memiliki fokus pada Front-End Development serta kemampuan dasar dalam Full-Stack Development. Saya terbiasa bekerja dengan HTML, CSS, JavaScript, dan React, serta memahami pembuatan API, CRUD, dan pengelolaan database menggunakan Node.js.
+            
+            <div class="about-content">
+                
+                <div class="about-image-container">
+                    <div class="image-backdrop"></div>
+                    <img src="D:/PORTOWISIK.jpeg" alt="Foto Wisik Adi Panuntun" class="profile-pic">
+                </div>
 
-            Saya adalah individu yang teliti, adaptif, dan memiliki minat besar untuk terus mengembangkan kemampuan teknis. Saat ini saya sedang mempersiapkan diri untuk mengikuti program magang guna memperoleh pengalaman praktis di bidang pengembangan web.</p>
+                <div class="about-text-area">
+                    <h2 class="about-name">Wisik Adi Panuntun</h2>
+                    
+                    <p>Saya adalah mahasiswa Teknik Informatika yang fokus pada web development, machine learning, dan UI/UX design. Saya senang menciptakan solusi digital yang fungsional, indah, dan berdampak langsung.</p>
+                    
+                    <p>Dalam pengembangan web, saya terbiasa menggunakan <b>Laravel</b> dan <b>React</b> sebagai tech stack utama. Untuk eksperimen data, saya menggunakan <b>Python</b>. Saya juga mengandalkan <b>Figma</b> untuk merancang UI modern yang intuitif, konsisten, dan mudah digunakan.</p>
+
+                    <div class="expertise-box">
+                        <h3>Areas of Expertise</h3>
+                        <ul class="skills-list">
+                            <li>Web Development</li>
+                            <li>Frontend</li>
+                            <li>Backend</li>
+                            <li>Machine Learning</li>
+                            <li>UI/UX Design</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="tools" class="tools-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="tools-title">Tools & Teknologi</h2>
+                <p class="tools-subtitle">Teknologi yang saya gunakan untuk membangun ide menjadi aplikasi.</p>
+            </div>
+            
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <i class="devicon-cplusplus-plain colored tool-icon"></i>
+                    <div class="tool-info">
+                        <h4>C++</h4>
+                        <span>Language</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="devicon-csharp-plain colored tool-icon"></i>
+                    <div class="tool-info">
+                        <h4>C#</h4>
+                        <span>Language</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="devicon-php-plain colored tool-icon"></i>
+                    <div class="tool-info">
+                        <h4>PHP</h4>
+                        <span>Language</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="devicon-laravel-original colored tool-icon"></i>
+                    <div class="tool-info">
+                        <h4>Laravel</h4>
+                        <span>Framework</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="devicon-html5-plain colored tool-icon"></i>
+                    <div class="tool-info">
+                        <h4>HTML5</h4>
+                        <span>Language</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="devicon-css3-plain colored tool-icon"></i>
+                    <div class="tool-info">
+                        <h4>CSS</h4>
+                        <span>Language</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="devicon-javascript-plain colored tool-icon"></i>
+                    <div class="tool-info">
+                        <h4>JavaScript</h4>
+                        <span>Language</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="devicon-mysql-plain colored tool-icon"></i>
+                    <div class="tool-info">
+                        <h4>MySQL</h4>
+                        <span>Database</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="devicon-vscode-plain colored tool-icon"></i>
+                    <div class="tool-info">
+                        <h4>VS Code</h4>
+                        <span>Code Editor</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="devicon-java-plain colored tool-icon"></i>
+                    <div class="tool-info">
+                        <h4>Java</h4>
+                        <span>Language</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="devicon-tailwindcss-original colored tool-icon"></i>
+                    <div class="tool-info">
+                        <h4>Tailwind</h4>
+                        <span>CSS Framework</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="devicon-react-original colored tool-icon"></i>
+                    <div class="tool-info">
+                        <h4>React JS</h4>
+                        <span>JS Library</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="devicon-nextjs-plain tool-icon"></i>
+                    <div class="tool-info">
+                        <h4>Next.js</h4>
+                        <span>Framework</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="devicon-flask-original tool-icon"></i>
+                    <div class="tool-info">
+                        <h4>Flask</h4>
+                        <span>Python Framework</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="devicon-pandas-original colored tool-icon"></i>
+                    <div class="tool-info">
+                        <h4>Pandas</h4>
+                        <span>Data Library</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="devicon-scikitlearn-plain colored tool-icon"></i>
+                    <div class="tool-info">
+                        <h4>Scikit-Learn</h4>
+                        <span>Machine Learning</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="devicon-github-original tool-icon"></i>
+                    <div class="tool-info">
+                        <h4>GitHub</h4>
+                        <span>Platform</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="devicon-figma-plain colored tool-icon"></i>
+                    <div class="tool-info">
+                        <h4>Figma</h4>
+                        <span>Design Tool</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="devicon-canva-original colored tool-icon"></i>
+                    <div class="tool-info">
+                        <h4>Canva</h4>
+                        <span>Design Tool</span>
+                    </div>
+                </div>
+                
+                <div class="tool-card">
+                    <i class="devicon-git-plain colored tool-icon"></i>
+                    <div class="tool-info">
+                        <h4>Git</h4>
+                        <span>Version Control</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -41,26 +240,73 @@
         <div class="container">
             <h2>Karya / Proyek</h2>
             <div class="grid">
-                <div class="card">
-                    <div class="card-header">Proyek 1</div>
+                
+                <div class="card project-card">
+                    <div class="card-img-holder">
+                        <img src="assets/proyek1.jpg" alt="Screenshot Proyek 1">
+                    </div>
                     <div class="card-body">
-                        <h3>[Judul Proyek 1]</h3>
-                        <p>Deskripsi singkat: Tugas kuliah membuat sistem X menggunakan bahasa Y.</p>
+                        <h3>Sistem Informasi Kampus</h3>
+                        <p class="project-desc">Aplikasi berbasis web untuk pengelolaan data mahasiswa dan nilai akademik. Fitur mencakup CRUD, Login Multi-user, dan pelaporan PDF.</p>
+                        
+                        <div class="tech-stack">
+                            <span>Laravel</span>
+                            <span>MySQL</span>
+                            <span>Bootstrap</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-header">Proyek 2</div>
+
+                <div class="card project-card">
+                    <div class="card-img-holder">
+                        <img src="assets/proyek2.jpg" alt="Screenshot Proyek 2">
+                    </div>
                     <div class="card-body">
-                        <h3>[Judul Proyek 2]</h3>
-                        <p>Deskripsi singkat: Analisis data X menggunakan Excel/Python.</p>
+                        <h3>Analisis Penjualan Retail</h3>
+                        <p class="project-desc">Dashboard interaktif untuk memvisualisasikan tren penjualan tahunan. Melakukan cleaning data dan explorative data analysis (EDA).</p>
+                        
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>Matplotlib</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fa-brands fa-github"></i> Notebook</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-header">Proyek 3</div>
-                    <div class="card-body">
-                        <h3>[Judul Proyek 3]</h3>
-                        <p>Deskripsi singkat: Desain UI/UX untuk aplikasi mobile.</p>
+
+                <div class="card project-card">
+                    <div class="card-img-holder" style="background: white;"> 
+                        
+                        <img src="D:/WizFal_creative.jpg" 
+                             alt="Logo WizFal" 
+                             style="width: 310px !important; height: 200px !important; object-fit: contain; margin: 20px auto; display: block;">
+                    
                     </div>
+                    <div class="card-body">
+                        <h3>WizFal Creative</h3>
+                        <p class="project-desc">Design dari sebuah website penyedia layanan fotografi dan vidiografi untuk acara pribadi maupun kebutuhan visual UMKM</p>
+                        
+                        <div class="tech-stack">
+                            <span>Figma</span>
+                            <span>User Research</span>
+                            <span>Prototyping</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://www.figma.com/design/ZGZMhXQL8alBursIR7JJ2V/WizfalCreative?m=auto&t=5rZgsMqb5ud8r89C-6" target="_blank"><i class="fa-brands fa-figma"></i> Desain</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
                 </div>
             </div>
         </div>
@@ -68,17 +314,82 @@
 
     <section id="contact" class="section-padding">
         <div class="container text-center">
-            <h2>Mari Bekerja Sama</h2>
-            <p>Tertarik merekrut saya untuk magang? Silakan hubungi:</p>
-            <br>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=wisikadipanuntn16@gmail.com" target="_blank" class="btn-outline">Email</a>
-            <a href="https://www.linkedin.com/in/wisikadip16" target="_blank" class="btn-outline">LinkedIn</a>
+            <h2>Kontak Saya</h2>
+            <p>Silakan hubungi saya melalui platform di bawah ini:</p>
+            
+            <div class="contact-wrapper">
+                <a href="mailto:wisikadipanuntn16@gmail.com" class="contact-card">
+                    <i class="fa-solid fa-envelope icon email-icon"></i>
+                    <span class="text">wisikadipanuntn16@gmail.com</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/wisikadip16" target="_blank" class="contact-card">
+                    <i class="fa-brands fa-linkedin icon linkedin-icon"></i>
+                    <span class="text">LinkedIn</span>
+                </a>
+
+                <a href="https://wa.me/62895324926413" target="_blank" class="contact-card">
+                   <i class="fa-brands fa-whatsapp icon whatsapp-icon"></i>
+                    <span class="text">WhatsApp</span>
+                </a>
+            </div>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Wisik Adi Panuntun. Dibuat sendiri dengan HTML & CSS.</p>
     </footer>
+     <script>
+        const textElement = document.querySelector('.typing-text');
+        
+        // GANTI KATA-KATA DI SINI
+        const words = [
+            "Wisik Adi Panuntun", 
+            "Informatics Engineering", 
+            "Web Developer",
+            "UI/UX Enthusiast"
+        ];
 
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        const typeEffect = () => {
+            const currentWord = words[wordIndex];
+            
+            if (isDeleting) {
+                // Hapus huruf
+                charIndex--;
+            } else {
+                // Ketik huruf
+                charIndex++;
+            }
+
+            // Tampilkan teks yang sedang diproses
+            textElement.textContent = currentWord.substring(0, charIndex);
+
+            // Atur kecepatan mengetik
+            let typeSpeed = isDeleting ? 100 : 200; // Menghapus lebih cepat dari mengetik
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                // Jika kata selesai diketik, tunggu sebentar lalu hapus
+                typeSpeed = 2000; // Tunggu 2 detik sebelum menghapus
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                // Jika kata selesai dihapus, ganti ke kata berikutnya
+                isDeleting = false;
+                wordIndex++;
+                if (wordIndex === words.length) {
+                    wordIndex = 0; // Ulangi dari awal jika sudah habis
+                }
+                typeSpeed = 500; // Tunggu sebentar sebelum mengetik kata baru
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        };
+
+        // Jalankan fungsi saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', typeEffect);
+    </script>
 </body>
 </html>
